@@ -573,14 +573,15 @@
     };
 
     const COLLECTIONS = [
+        { key: 'forms', label: 'Surveys', icon: '📝', ids: ['survey', 'feedback'] },
+      { key: 'infosys', label: 'Infosys Prep', icon: '💼', ids: ['infosys-pseudocode-free', 'infosys-pseudocode-2'] },
       { key: 'roadmaps', label: 'Roadmaps', icon: '🗺️', ids: ['backend', 'js-roadmap', 'js-roadmap-png'] },
       { key: 'interview', label: 'Interview Prep', icon: '🎯', ids: ['sql-interview', 'java-interview', 'dsa-checklist', 'mass-hiring', 'placement-interview-guide'] },
       { key: 'resume', label: 'Resume & Career', icon: '📄', ids: ['resume-projects', 'resume-format'] },
       { key: 'cheatsheets', label: 'Cheatsheets', icon: '⚡', ids: ['placement-cheatsheet', 'coding-basics', 'quant-aptitude'] },
       { key: 'ai', label: 'AI Tools', icon: '🤖', ids: ['ai-coding-comparison', 'ai-coding-workflow'] },
     
-      { key: 'forms', label: 'Surveys', icon: '📝', ids: ['survey', 'feedback'] },
-      { key: 'infosys', label: 'Infosys Prep', icon: '💼', ids: ['infosys-pseudocode-free', 'infosys-pseudocode-2'] },
+    
     ];
 
     const COLOR_TEXT = {
@@ -637,7 +638,7 @@
       });
     });
 
-    let tabsOpen = ['readme'];
+    let tabsOpen = ['infosys-pseudocode-free'];
     const MAX_TABS = 6;
     const crumbNames = { readme: 'README.md' };
     Object.keys(RESOURCES).forEach(id => crumbNames[id] = RESOURCES[id].name);
@@ -744,7 +745,7 @@
       `;
     }
 
-    let currentId = 'readme';
+   let currentId = 'infosys-pseudocode-free';
 
     function openResource(id) {
       currentId = id;
@@ -783,7 +784,7 @@
     );
 
     renderTabs();
-    openResource('readme');
+   openResource('infosys-pseudocode-free');
   </script>
 </body>
 </html>
